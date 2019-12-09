@@ -17,7 +17,6 @@ function App() {
           <Button variant="danger">Hello</Button>
         </div>
       </Animated>
-      <Footer />
     </React.Fragment>
   );
 }
