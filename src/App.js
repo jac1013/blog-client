@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import {Animated} from "react-animated-css";
+// import Button from 'react-bootstrap/Button';
+// import {Animated} from "react-animated-css";
 import Header from "./components/Navigation/Header/Header";
 
 function App() {
@@ -11,12 +11,12 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
-        <div className="App">
-          <h1>React App</h1>
-          <Button variant="danger">Hello</Button>
-        </div>
-      </Animated>
+      {/*<Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>*/}
+      {/*  <div className="App">*/}
+      {/*    <h1>React App</h1>*/}
+      {/*    <Button variant="danger">Hello</Button>*/}
+      {/*  </div>*/}
+      {/*</Animated>*/}
     </React.Fragment>
   );
 }
