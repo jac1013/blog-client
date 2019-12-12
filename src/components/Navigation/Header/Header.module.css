@@ -1,0 +1,6 @@
+.Header {
+    display: flex;
+    border-bottom: 3px solid green;
+    justify-content: space-between;
+    padding: 30px 50px 10px 50px;
+}
