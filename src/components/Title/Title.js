@@ -4,10 +4,10 @@ const Title = (props) => {
   let size = props.fontSize;
 
   const style = {
-    padding: '0',
+    paddingTop: '0',
     margin: '0',
     fontSize: size,
-    fontWeight: '900'
+    fontWeight: '900',
   };
 
   return (
