@@ -1,5 +1,5 @@
-footer{
-    display: flex !important;
+.Footer{
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
