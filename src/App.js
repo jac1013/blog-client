@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 import Header from "./components/Navigation/Header/Header";
+import ArticleBody from "./components/ArticleBody/ArticleBody";
 import Footer from "./components/Footer-Comp/Footer.js";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      <ArticleBody />
       <Footer />
     </React.Fragment>
   );
