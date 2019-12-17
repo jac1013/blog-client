@@ -1,0 +1,13 @@
+.Main {
+    flex-basis: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+.Main div {
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
