@@ -3,9 +3,10 @@ import {Route, Redirect} from 'react-router-dom';
 
 import './App.css';
 import Header from "./components/Navigation/Header/Header";
+import Footer from "./components/Footer-Comp/Footer.js";
 import MainBody from "./containers/MainBody/MainBody";
 import Welcome from "./containers/Welcome/Welcome";
-import AllArticles from "./containers/AllArticles/AllArticles";
+import Articles from "./containers/Articles/Articles";
 import AboutMe from "./containers/AboutMe/AboutMe";
 
 function App(props) {
@@ -15,10 +16,11 @@ function App(props) {
     <React.Fragment>
       <Header />
       <Route path="/article/:id" component={MainBody} />
-      <Route path="/articles" component={AllArticles} />
+      <Route path="/articles" component={Articles} />
       <Route path="/about-me" component={AboutMe} />
       <Route path="/" exact component={Welcome} />
       <Redirect to='/' />
+      <Footer />
     </React.Fragment>
   );
 }

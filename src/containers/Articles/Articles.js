@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AllArticles = () => (
+const Articles = () => (
   <h1>List of Articles</h1>
 );
 
-export default AllArticles;
+export default Articles;
