@@ -1,9 +1,9 @@
 import React from 'react';
 
 import classes from './MainBody.module.css';
-import ArticleBody from "../ArticleBody/ArticleBody";
-import Title from "../Title/Title";
-import WrittenBy from "../WrittenBy/WrittenBy";
+import ArticleBody from "../../components/ArticleBody/ArticleBody";
+import Title from "../../components/Title/Title";
+import WrittenBy from "../../components/WrittenBy/WrittenBy";
 
 const MainBody = () => (
   <main className={classes.Main}>
