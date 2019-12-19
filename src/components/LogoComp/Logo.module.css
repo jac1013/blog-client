@@ -1,0 +1,7 @@
+img {
+    display: flex;
+    width: 300;
+    height: 300px;
+    align-self: flex-start;
+
+ }
