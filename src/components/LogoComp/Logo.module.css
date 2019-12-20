@@ -1,8 +1,7 @@
 img {
     display: flex;
-    width: 300px;
-    height: 300px;
-    align-self: stretch;
-    float: left;
-    
- }
+    width: 250px;
+    height: 250px;
+    margin-top: -50px;
+    margin-bottom: -40px;
+}
