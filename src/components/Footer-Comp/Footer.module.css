@@ -5,7 +5,21 @@
     justify-content: center;
     color: white;
     background-color: black;
-    font-weight: bold;
     font-size: large;
     flex-basis: 250px;
+}
+
+.Blog{
+    font-weight: bold;
+}
+
+.A{
+    text-decoration: none;
+    color: white;
+}
+
+.A:hover{
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
 }
