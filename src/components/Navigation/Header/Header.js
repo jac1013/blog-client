@@ -7,7 +7,7 @@ import Logo from "../../LogoComp/Logo.js";
 const Header = () => (
   <header className={classes.Header}>
     <Logo Link="/"></Logo>
-    <NavigationItems></NavigationItems>
+    <NavigationItems></NavigationItems> 
   </header>
 );
 
