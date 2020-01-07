@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-const Aboutme = () => {
+const AboutMeContent = () => {
     const input ='This is a Parragraph\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n'+
@@ -44,4 +44,4 @@ const Aboutme = () => {
     );
   };
   
-  export default Aboutme;
+  export default AboutMeContent;
