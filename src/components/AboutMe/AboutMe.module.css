@@ -1,0 +1,49 @@
+.About {
+    flex-basis: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    max-width: 900px;
+    margin: auto;
+    font-size: 10px;
+}
+
+.About div{
+    max-width: 800px;
+    margin-top: 60px;
+    font-size: calc(1.6em + 0.5vw);
+}
+
+.About img{
+    margin-top: auto;
+    width: 195px;
+    border-radius: 4px;
+    border: 0px solid;
+    box-shadow: 0px 0px 1px 0px black;
+    float: left;
+    margin-right: 20px;
+}
+
+.About h2{
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+}
+
+.About ul{
+    padding-left: 1em;
+}
+
+.About a{
+    text-decoration: none;
+    color: green;
+}
+
+.About a:hover{
+    text-decoration: none;
+    color: green;
+}
