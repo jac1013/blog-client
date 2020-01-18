@@ -11,7 +11,7 @@ const Title = (props) => {
   };
 
   return (
-    <h1 style={style}>{props.children}</h1>
+    <h1 style={style}>{props.title}</h1>
   );
 };
 
