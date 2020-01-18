@@ -5,7 +5,7 @@ import classes from "../AboutMe/AboutMe.module.css";
 import PictureRef from "../../assets/Picref.jpg";
 const AboutMe = () => (
   <div className={classes.About}>
-    <Title fontSize="60px">About Joseph Arrieta.</Title>
+    <Title fontSize="60px" title='About Joseph Arrieta.'></Title>
     <div>
       <img img src={PictureRef} alt="Profile" />
       <AboutMeContent />

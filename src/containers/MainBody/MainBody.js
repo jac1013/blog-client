@@ -8,7 +8,7 @@ import WrittenBy from "../../components/WrittenBy/WrittenBy";
 const MainBody = () => (
   <main className={classes.Main}>
     <div>
-      <Title fontSize="100px">Helloggggggggggggggggggggg</Title>
+      <Title fontSize="100px" title='heloggggggggggggg'></Title>
       <WrittenBy link="https://www.youtube.com/watch?v=uuBETyA_yxc" author="@Joseph" date="January 14, 2017"/>
       <ArticleBody />
     </div>
