@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import AboutMeContent from "../../components/AboutMeComponent/AboutMe.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
-import PictureRef from "../../assets/Picref.jpg";
 
 const AboutMe = () => {
   const [inputTexts] = useState([{
@@ -45,10 +44,13 @@ const AboutMe = () => {
      '## How you contact me?\n\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
-     '* [LinkedIn](https:/linkedin.com)'}]
+     '* [LinkedIn](https:/linkedin.com)',
+    link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4'
+    }]
   );
-
-  let aboutMe = null;
+  
+  
+    let aboutMe = null;
 
   aboutMe = (
     <div className={classes.About}>
@@ -57,7 +59,7 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={inputText.title}></Title>
           </div>
-            <img img src={PictureRef} alt="Profile" />
+            <img img src={inputText.link} alt="Profile" />
             <AboutMeContent source={inputText.body} />
         </div>
       ))}
