@@ -1,7 +1,14 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-const AboutMeContent = () => {
-    const input ='This is a Parragraph\n'+
+import React, {useState} from 'react';
+import AboutMeContent from "../../components/AboutMeComponent/AboutMe.js";
+import Title from "../../components/Title/Title";
+import classes from "../AboutMeContainer/AboutMe.module.css";
+import PictureRef from "../../assets/Picref.jpg";
+
+const AboutMe = () => {
+  const [inputTexts] = useState([{
+    id: '1',
+    title: 'About Joseph Arrieta.',
+    body: 'This is a Parragraph\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n'+
      'ex ea commodo consequat. Duis aute irure dolor.\n\n'+
@@ -38,10 +45,25 @@ const AboutMeContent = () => {
      '## How you contact me?\n\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
-     '* [LinkedIn](https:/linkedin.com)'
-    return (
-      <ReactMarkdown  source={input} />
-    );
-  };
-  
-  export default AboutMeContent;
+     '* [LinkedIn](https:/linkedin.com)'}]
+  );
+
+  let aboutMe = null;
+
+  aboutMe = (
+    <div className={classes.About}>
+      {inputTexts.map(inputText => (
+        <div key={inputText.id}>
+          <div>
+            <Title fontSize="60px" title={inputText.title}></Title>
+          </div>
+            <img img src={PictureRef} alt="Profile" />
+            <AboutMeContent source={inputText.body} />
+        </div>
+      ))}
+    </div>
+  );
+  return aboutMe
+};
+
+export default AboutMe;
