@@ -4,9 +4,9 @@ import classes from "../LogoComp/Logo.module.css";
  
 const Logo = props => {
   return (
-    <div className={classes.Logo}>
+    <div>
       <Link to="/"> 
-        <img src={props.src} alt={props.alt} />
+        <img className={classes.Logo} src={props.src} alt={props.alt} />
       </Link>
     </div>
   );
