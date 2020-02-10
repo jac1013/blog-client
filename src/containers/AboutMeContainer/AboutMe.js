@@ -45,7 +45,8 @@ const AboutMe = () => {
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
      '* [LinkedIn](https:/linkedin.com)',
-    link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4'
+    link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4',
+    alt: 'Profile Picture'
     }]
   );
   
@@ -56,11 +57,11 @@ const AboutMe = () => {
     <div className={classes.About}>
       {inputTexts.map(inputText => (
         <div key={inputText.id}>
-          <div>
+
             <Title fontSize="60px" title={inputText.title}></Title>
-          </div>
-            <img img src={inputText.link} alt="Profile" />
+            <img img src={inputText.link} alt={inputText.alt} />
             <AboutMeContent source={inputText.body} />
+            
         </div>
       ))}
     </div>

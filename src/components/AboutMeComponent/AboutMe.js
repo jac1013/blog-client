@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 const AboutMeContent = (props) => {
      return (
-      <ReactMarkdown  source={props.source} />
+      <ReactMarkdown source={props.source} />
     );
   };
   
