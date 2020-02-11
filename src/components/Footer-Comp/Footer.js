@@ -16,9 +16,7 @@ return(
         <div>
             <p>Keep in touch via <a className={classes.KeepinTouch} href={githubUrl}>Github</a> or <a className={classes.KeepinTouch} href={linkedinUrl}>LinkedIn</a></p>
         </div>
-        <div>
-            <p>{copyrightYear} {author} All rights reserved.</p>
-        </div>
+        <div><p>{copyrightYear} {author} All rights reserved.</p></div>
     </footer>
     );
 }
