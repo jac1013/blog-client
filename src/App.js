@@ -7,7 +7,7 @@ import Footer from "./components/Footer-Comp/Footer.js";
 import MainBody from "./containers/MainBody/MainBody";
 import Home from "./containers/Home/Home";
 import Articles from "./containers/Articles/Articles";
-import AboutMe from "./components/AboutMe/AboutMe.js";
+import AboutMe from "./containers/AboutMeContainer/AboutMe.js";
 
 function App(props) {
   console.log(process.env.REACT_APP_API_URL);
