@@ -6,5 +6,4 @@ const AboutMeContent = props => {
         <ReactMarkdown source={props.source} />
     );
   };
-  
-  export default AboutMeContent;
+export default AboutMeContent;

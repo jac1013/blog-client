@@ -6,13 +6,13 @@ import Logo from "../../LogoComp/Logo.js";
 
 const Header = () => {
 
-  const [useSrc] = useState([LogoImg])
-  const [useAlt] = useState(['Logo-Blog'])
+  const [src] = useState([LogoImg])
+  const [alt] = useState(['Logo-Blog'])
   return (
   <header className={classes.Header}>
     <Logo Link="/"
-    src={useSrc}
-    alt={useAlt} />
+    src={src}
+    alt={alt} />
     <NavigationItems></NavigationItems> 
   </header>
   );
