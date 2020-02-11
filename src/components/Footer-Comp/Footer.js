@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import classes from "../Footer-Comp/Footer.module.css";
 
 function Footer() {
-    const [blogName] = useState(["CodeMoulding.blog"])
-    const [copyrightYear] = useState(["Copyright ©2019"])
-    const [author] = useState (["Joseph Arrieta."])
-    const [githubUrl] = useState (["http://github.com/jac1013"])
-    const [linkedinUrl] = useState (["http://linkedin.com/in/joseph-arrieta-81b8887b/w"])
-    
+    const [BlogName] = useState(["CodeMoulding.blog"])
+    const [CopyrightYear] = useState(["Copyright ©2019"])
+    const [Author] = useState (["Joseph Arrieta."])
+    const [UrlOne] = useState (["http://github.com/jac1013"])
+    const [UrlTwo] = useState (["http://linkedin.com/in/joseph-arrieta-81b8887b/w"])
+
     return(
     <footer className={classes.Footer}>
         <div className={classes.Blog}>
-            <p>{blogName}</p>
+            <p>{BlogName}</p>
         </div>
         <div>
-            <p>Keep in touch via <a className={classes.KeepinTouch} href={githubUrl}>Github</a> or <a className={classes.KeepinTouch} href={linkedinUrl}>LinkedIn</a></p>
+            <p>Keep in touch via <a className={classes.A} href={UrlOne}>Github</a> or <a className={classes.A} href={UrlTwo}>LinkedIn</a></p>
         </div>
         
         <div>
-            <p>{copyrightYear} {author} All rights reserved.</p>
+            <p>{CopyrightYear} {Author} All rights reserved.</p>
+        </div>
+        <div><p>Happy Coding!</p></div>
     </footer>
     );
 }
-export default Footer;
+
+
+  export default Footer;
