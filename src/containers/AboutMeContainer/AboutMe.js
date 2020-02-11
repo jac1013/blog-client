@@ -4,7 +4,7 @@ import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
 
 const AboutMe = () => {
-  const [inputTexts] = useState([{
+  const [aboutMeInfo] = useState([{
     id: '1',
     title: 'About Joseph Arrieta.',
     body: 'This is a Parragraph\n'+
@@ -13,25 +13,21 @@ const AboutMe = () => {
      'ex ea commodo consequat. Duis aute irure dolor.\n\n'+
      'In reprehenderit in voluptate velit esse cillum dolore eu fugiat\n'+
      'nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n'+
-  
      '## My story so far\n\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
       'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n'+
       'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n'+
       'nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n'+
-      
      'This is a Parragraph\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
       'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n'+
       'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n'+
       'nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n'+
-
       'This is a Parragraph\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
       'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n'+
       'ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n'+
       'nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n'+
-      
       '## Some fun facts\n\n'+
       'This is a Parragraph\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
@@ -40,7 +36,6 @@ const AboutMe = () => {
      '* I met programming at collage and was love at first sight.\n'+
      '* Read is my primary choice of recreation.\n'+
      '* In my spare time I like to go out to eat Sushi\n\n'+
-     
      '## How you contact me?\n\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
@@ -48,19 +43,18 @@ const AboutMe = () => {
     link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4'
     }]
   );
-  
-  
+
     let aboutMe = null;
 
   aboutMe = (
     <div className={classes.About}>
-      {inputTexts.map(inputText => (
-        <div key={inputText.id}>
+      {aboutMeInfo.map(aboutMeInfo => (
+        <div key={aboutMeInfo.id}>
           <div>
-            <Title fontSize="60px" title={inputText.title}></Title>
+            <Title fontSize="60px" title={aboutMeInfo.title}></Title>
           </div>
-            <img img src={inputText.link} alt="Profile" />
-            <AboutMeContent source={inputText.body} />
+            <img img src={aboutMeInfo.link} alt="Profile" />
+            <AboutMeContent source={aboutMeInfo.body} />
         </div>
       ))}
     </div>
