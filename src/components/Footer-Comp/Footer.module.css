@@ -15,12 +15,12 @@
     font-weight: bold;
 }
 
-.KeepinTouch{
+.Contact{
     text-decoration: none;
     color: green;
 }
 
-.KeepinTouch:hover{
+.Contact:hover{
     text-decoration: none;
     color: green;
     font-size: 20px;
