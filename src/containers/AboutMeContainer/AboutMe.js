@@ -24,9 +24,9 @@ const AboutMe = () => {
       'aliquam venenatis ligula dui. At penatibus nascetur nisi facilisis tristique praesent nullam class, taciti ornare\n'+
       'sagittis risus etiam hendrerit parturient turpis vulputate, metus auctor id ad proin molestie ante.\n\n'+
       'This is the third Parragraph\n'+
-     'Maecenas phasellus a risus facilisi vel aliquet nam dis, etiam imperdiet primis ultrices nulla nunc justo nisi vitae, malesuada himenaeos cursus pulvinar dictumst ut morbi.\n'+
+     'Maecenas phasellus a risus facilisi vel aliquet nam dis, etiam imperdiet primis ultrices nulla nunc justo nisi vitae, malesuada himenaeos.\n'+
       'Tristique congue lacinia praesent potenti feugiat platea, himenaeos ultricies metus dapibus habitant. Mus nulla vel lobortis\n'+
-      'fusce platea aptent cursus iaculis eget diam elementum molestie nibh risus turpis, porta ante commodo hendrerit sagittis duis blandit sollicitudin orci dignissim rutrum dui enim massa. Nec nam\n'+
+      'fusce platea aptent cursus iaculis eget diam elementum molestie nibh risus turpis, porta ante commodo hendrerit sagittis duis.\n'+
       'vehicula mattis facilisis condimentum turpis etiam, leo scelerisque metus pulvinar nulla praesent cras, proin.\n\n'+
       '## Some fun facts\n\n'+
       'This is the last Parragraph\n'+
