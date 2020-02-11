@@ -44,8 +44,8 @@ const AboutMe = () => {
      '## How you contact me?\n\n'+
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
-     '* [LinkedIn](https:/linkedin.com)',
-    link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4',
+     '* [LinkedIn](http://linkedin.com/in/joseph-arrieta-81b8887b/w)',
+    profile: `../../src/assets/Picref.jpg`,
     alt: 'Profile Picture'
     }]
   );
@@ -59,7 +59,7 @@ const AboutMe = () => {
         <div key={inputText.id}>
 
             <Title fontSize="60px" title={inputText.title}></Title>
-            <img img src={inputText.link} alt={inputText.alt} />
+            <img src={inputText.profile} alt={inputText.alt} />
             <AboutMeContent source={inputText.body} />
             
         </div>
