@@ -8,18 +8,19 @@ function Footer() {
     const [githubUrl] = useState (["http://github.com/jac1013"])
     const [linkedinUrl] = useState (["http://linkedin.com/in/joseph-arrieta-81b8887b/w"])
     
-return(
+    return(
     <footer className={classes.Footer}>
         <div className={classes.Blog}>
             <p>{blogName}</p>
         </div>
         <div>
-            <p>Keep in touch via <a className={classes.KeepinTouch} href={githubUrl}>Github</a> or <a className={classes.KeepinTouch} href={linkedinUrl}>LinkedIn</a></p>
+            <p>Keep in touch via <a className={classes.Contact} href={githubUrl}>Github</a> or <a className={classes.Contact} href={linkedinUrl}>LinkedIn</a></p>
         </div>
-        <div><p>{copyrightYear} {author} All rights reserved.</p></div>
+        <div>
+            <p>{copyrightYear} {author} All rights reserved.</p>
+        </div>
+        <div><p>Happy Coding!</p></div>
     </footer>
     );
 }
-
-
-export default Footer;
+  export default Footer;
