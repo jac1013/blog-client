@@ -9,7 +9,7 @@ function Footer() {
     const [linkedinUrl] = useState (["http://linkedin.com/in/joseph-arrieta-81b8887b/w"])
     
 return(
-    <footer>
+    <footer className={classes.Footer}>
         <div className={classes.Blog}>
             <p>{blogName}</p>
         </div>
