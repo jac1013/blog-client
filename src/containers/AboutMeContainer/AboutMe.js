@@ -20,8 +20,8 @@ function AboutMe() {
 return(
     <div className={classes.About}>
         <div key={aboutData.id}>
-          <Title fontSize="60px" title={aboutData.title} />
-          <AboutMeContent source={aboutData.body} />
+          <Title fontSize="60px" title={aboutData.title}/>
+          <AboutMeContent source={aboutData.body}/>
         </div>
     </div>
   );
