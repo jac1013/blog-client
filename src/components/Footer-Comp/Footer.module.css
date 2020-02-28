@@ -7,7 +7,7 @@
     background-color: black;
     font-size: large;
     flex-basis: 250px;
-    border-top: 6.5px outset;
+    border-top: 3.5px outset;
     border-top-color: green;
 }
 
@@ -15,13 +15,17 @@
     font-weight: bold;
 }
 
-.KeepinTouch{
+.Contact{
     text-decoration: none;
     color: green;
 }
 
-.KeepinTouch:hover{
+.Contact:hover{
     text-decoration: none;
     color: green;
     font-size: 20px;
+}
+
+.Bugged {
+    margin-top: 13px;
 }
