@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import classes from "../LogoComp/Logo.module.css";
+
 const Logo = props => {
   return (
   <div>
