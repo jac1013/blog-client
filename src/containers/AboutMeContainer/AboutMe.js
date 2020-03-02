@@ -6,7 +6,6 @@ import classes from "../AboutMeContainer/AboutMe.module.css";
 
 function AboutMe() {
   const [aboutData, setAboutData] = useState({});
-  
   const fetchData = async () => {
     const response = await axios.get('https://api.codecarver.dev/article/3');
     setAboutData(response.data.result);
@@ -25,6 +24,5 @@ return(
         </div>
     </div>
   );
-  };
-
+  }
 export default AboutMe;
