@@ -20,9 +20,9 @@ function Footer() {
                         <p>{footerData.name}</p>
                     </div>
                     <div>
-                        <p>Keep in Touch via <a className={classes.KeepInTouch} href={footerData.githuburl}>GitHub </a> 
-                        or <a className={classes.KeepInTouch} href={footerData.linkedinurl}>LinkedIn</a>
-                        </p>
+                       <p>Keep in Touch via <a className={classes.KeepInTouch} href={footerData.githuburl}>GitHub </a> 
+                            or <a className={classes.KeepInTouch} href={footerData.linkedinurl}>LinkedIn</a>
+                       </p>
                     </div>
                     <div>
                         <p>{footerData.copyright} {footerData.author}</p>
