@@ -21,7 +21,7 @@ function Footer() {
                     </div>
                     <div>
                         <p>Keep in Touch via <a className={classes.KeepInTouch} href={footerData.githuburl}>GitHub </a> 
-                        or <a className={classes.KeepInTouch} href={footerData.linkedinurl}>LinkedIn</a>
+                            or <a className={classes.KeepInTouch} href={footerData.linkedinurl}>LinkedIn</a>
                         </p>
                     </div>
                     <div>

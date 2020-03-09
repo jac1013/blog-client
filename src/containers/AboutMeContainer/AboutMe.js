@@ -5,9 +5,9 @@ import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
 
 function AboutMe() {
-  const [aboutData, setAboutData] = useState({});
+  const [aboutData, setAboutData] = useState([]);
   const fetchData = async () => {
-    const response = await axios.get('https://api.codecarver.dev/article/3');
+    const response = await axios('https://api.codecarver.dev/article/3');
     setAboutData(response.data.result);
     console.log(response);
   };
