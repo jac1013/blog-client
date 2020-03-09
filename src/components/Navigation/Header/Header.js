@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import NavigationItems from "./NavigationItems/NavigationItems";
 import classes from "./Header.module.css";
-import WebLogo from '../../../assets/Logo.png'
+import WebLogo from '../../../assets/Logo.jpg'
 import Logo from "../../LogoComp/Logo.js";
 
 const Header = () => {
