@@ -1,46 +1,19 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import ArticlesItem from "../../components/ArticlesItem/ArticlesItem";
 import Title from "../../components/Title/Title";
 import classes from "./Articles.module.css";
 
 const Articles = () => {
-  const [posts] = useState([{
-      id: '1',
-      title: 'asdspgada',
-      body: 'Quisque nec purus est. Vivamus non lorem nunc. Curabitur semper, nibh eu mollis finibus, metus eros dapibus orci, ullamcorper suscipit dolor ligula sed justo.',
-      date: 'asdsad',
-      link: '1'
-    },
-    {
-      id: '2',
-      title: 'asdsada',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper gravida ligula. Maecenas aliquet urna eros, ac varius nunc pretium a.',
-      date: 'asdsad',
-      link: '1'
-    },
-    {
-      id: '3',
-      title: 'asdsada',
-      body: 'Curabitur fermentum consequat pretium. Curabitur placerat non erat gravida feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.',
-      date: 'asdsad',
-      link: '1'
-    },
-    {
-      id: '4',
-      title: 'asdsada',
-      body: 'Mauris pellentesque malesuada justo. In eu felis nec nisi semper ultricies quis vitae ligula. Morbi sit amet mauris auctor, fermentum arcu in, varius nisl.',
-      date: 'asdsad',
-      link: '1'
-    },
-    {
-      id: '5',
-      title: 'asdsada',
-      body: 'Praesent convallis, erat ut elementum vulputate, enim elit tincidunt mi, vitae mattis tortor augue et magna. Ut ut iaculis sapien. Duis sed accumsan augue.',
-      date: 'asdsad',
-      link: '1'
-    }]
-  );
+  const [posts, setPosts] = useState([]);
+  const fetchData = async () => {
+    const response = await axios.get('https://api.codecarver.dev/articles');
+    setPosts(response.data.result);
+    console.log(response)
+  }
+    useEffect( () => {
+      fetchData();
+    }, []);
 
   let articles = null;
 

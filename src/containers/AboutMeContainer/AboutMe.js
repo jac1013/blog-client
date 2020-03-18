@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import AboutMeContent from "../../components/AboutMeComponent/AboutMeContent.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
+import Avatar from '../../assets/Picref.jpg'
 
 const AboutMe = () => {
   const [aboutMeInfo] = useState([{
@@ -40,7 +41,7 @@ const AboutMe = () => {
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore\n'+
      '* [GitHub](https:/github.com/jac1013) as @Jac1013\n'+
      '* [LinkedIn](https:/linkedin.com)',
-    link: 'https://avatars2.githubusercontent.com/u/5025920?s=400&v=4'
+    link: Avatar
     }]
   );
 
@@ -53,7 +54,7 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={aboutMeInfo.title}></Title>
           </div>
-            <img img src={aboutMeInfo.link} alt="Profile" />
+            <img img src={aboutMeInfo.link} alt="Avatar" />
             <AboutMeContent source={aboutMeInfo.body} />
         </div>
       ))}
