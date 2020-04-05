@@ -11,7 +11,7 @@ const MainBody = props => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
-      setGetId(response.data.result)
+      setGetPost(response.data.result)
     }
     fetchData();
   },[articleId])
