@@ -1,39 +1,31 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import classes from './MainBody.module.css';
 import ArticleBody from "../../components/ArticleBody/ArticleBody";
 import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
 
-const MainBody = () => {
-  const [posts] = useState([{
-      id: '1',
-      title: 'heloggggggggggggg',
-      body: '# This is a header\n\nThis is a paragraph, Alias architecto aut, consectetur earum est minus nesciunts nulla omnis? A alias dolor dolore dolores incidunt\n' +
-        '            sed voluptatum! At cumque dicta, exercitationem inventore modi natus obcaecati perferendis quidem? Ab,\n' +
-        '                nam? Alias architecto aut, consectetur earum est minus nesciunt nulla omnis? A alias dolor dolore dolores incidunt\n' +
-        '            sed voluptatum! At cumque dicta, exercitationem inventore modi natus obcaecati perferendis quidem? Ab,\n' +
-        '                nam?',
-      author: '@Joseph',
-      date: 'January 14, 2017',
-      link: 'https://www.youtube.com/watch?v=uuBETyA_yxc'
-    }]
-  );
+const MainBody = props => {
+  const [getId, setGetId] = useState([]);
+  let articleId = props.match.params.id;
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
+      setGetId(response.data.result)
+    }
+    fetchData();
+  },[articleId])
 
-  let article = null;
-
-  article = (
+  return(
     <main className={classes.Main}>
-      {posts.map(post => (
-        <div key={post.id}>
-          <Title fontSize="100px" title={post.title}></Title>
-          <WrittenBy link={post.link} author={post.author} date={post.date}/>
-          <ArticleBody source={post.body} />
+        <div key={getId.id}>
+          <Title fontSize="100px" title={getId.title}></Title>
+          <WrittenBy link={getId.link} author={getId.author} date={getId.created}/>
+          <ArticleBody source={getId.body} />
         </div>
-      ))}
     </main>
   );
-  return article
+  
 };
 
 export default MainBody;

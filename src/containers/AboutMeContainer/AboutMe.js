@@ -54,7 +54,7 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={aboutMeInfo.title}></Title>
           </div>
-            <img img src={aboutMeInfo.link} alt="Avatar" />
+            <img src={aboutMeInfo.link} alt="Avatar" />
             <AboutMeContent source={aboutMeInfo.body} />
         </div>
       ))}

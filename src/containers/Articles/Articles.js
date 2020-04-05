@@ -4,12 +4,12 @@ import ArticlesItem from "../../components/ArticlesItem/ArticlesItem";
 import Title from "../../components/Title/Title";
 import classes from "./Articles.module.css";
 
-const Articles = () => {
+const Articles = props => {
   const [posts, setPosts] = useState([]);
+
   const fetchData = async () => {
     const response = await axios.get('https://api.codecarver.dev/articles');
     setPosts(response.data.result);
-    console.log(response)
   }
     useEffect( () => {
       fetchData();
@@ -23,12 +23,13 @@ const Articles = () => {
         {posts.map(post => (
           <ArticlesItem
             title={post.title}
-            body={`${post.body.slice(0, 150)}...`}
-            date={post.created_at}
-            link={`/article/${post.link}`}
+            body={`${post.body.slice(0, 155)}...`}
+            date={post.created}
+            link={`/article/${post.id}`}
             key={post.id} />
         ))}
       </div>
+
     );
   } else {
     articles = (
