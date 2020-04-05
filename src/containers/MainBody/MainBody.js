@@ -6,7 +6,7 @@ import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
 
 const MainBody = props => {
-  const [getId, setGetId] = useState([]);
+  const [getPost, setGetPost] = useState([]);
   let articleId = props.match.params.id;
   useEffect(() => {
     const fetchData = async () => {
@@ -18,10 +18,10 @@ const MainBody = props => {
 
   return(
     <main className={classes.Main}>
-        <div key={getId.id}>
-          <Title fontSize="100px" title={getId.title}></Title>
-          <WrittenBy link={getId.link} author={getId.author} date={getId.created}/>
-          <ArticleBody source={getId.body} />
+        <div key={getPost.id}>
+          <Title fontSize="100px" title={getPost.title}></Title>
+          <WrittenBy link={getPost.link} author={getPost.author} date={getPost.created}/>
+          <ArticleBody source={getPost.body} />
         </div>
     </main>
   );
