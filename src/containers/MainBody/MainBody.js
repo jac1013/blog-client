@@ -7,7 +7,7 @@ import WrittenBy from "../../components/WrittenBy/WrittenBy";
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
-  let articleId = props.match.params.id;
+  const articleId = props.match.params.id;
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
@@ -25,7 +25,6 @@ const MainBody = props => {
         </div>
     </main>
   );
-  
 };
 
 export default MainBody;
