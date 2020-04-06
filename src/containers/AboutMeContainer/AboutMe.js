@@ -3,6 +3,7 @@ import axios from "axios";
 import AboutMeContent from "../../components/AboutMeComponent/AboutMeContent.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
+import InfoAboutMe from '../AboutMeContainer/InfoAboutMe.json'
 
 function AboutMe() {
   const [aboutData, setAboutData] = useState({});
