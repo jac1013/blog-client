@@ -6,25 +6,20 @@ import Logo from "../../LogoComp/Logo.js";
 
 const Header = () => {
 
-  const [logoImage] = useState([{
+  const [logo] = useState({
     "id": "1",
     "url": WebLogo,
-    "alt": "Logo-Image"
-}]);
-
-let logoImg = null;
-
-logoImg = (
-  <header>
-    {logoImage.map(logo => (
-      <header key={logo.id} className={classes.Header}>
-        <Logo src={logo.url} alt={logo.alt} />
-        <NavigationItems />
-      </header>
-    ))}
+    "alt": "Blog-Logo"
+});
+  return(
+    <header>
+        <header key={logo.id} className={classes.Header}>
+          <Logo src={logo.url} alt={logo.alt} />
+          <NavigationItems />
+        </header>
   </header>
 );
-return logoImg;
+
 };
 
 export default Header;
