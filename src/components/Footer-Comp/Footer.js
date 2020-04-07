@@ -7,7 +7,9 @@ function Footer() {
         copyRight: "Copyright ©2019",
         autor:"Joseph Arrieta",
         githubUrl:"http://github.com/jac1013",
-        linkedinUrl:"http://linkedin.com/in/joseph-arrieta-81b8887b/w"})
+        linkedinUrl:"http://linkedin.com/in/joseph-arrieta-81b8887b/w"
+    })
+    
     return(
     <footer className={classes.Footer}>
         <div className={classes.Blog}>
