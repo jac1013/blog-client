@@ -9,7 +9,7 @@ const AboutMe = () => {
   const [aboutMeInfo] = useState(InfoAboutMe)
 
     let aboutMe = null;
-
+    
   aboutMe = (
     <div className={classes.About}>
       {aboutMeInfo.map(aboutMeInfo => (
