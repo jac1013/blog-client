@@ -1,29 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 import AboutMeContent from "../../components/AboutMeComponent/AboutMeContent.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
-import InfoAboutMe from '../AboutMeContainer/InfoAboutMe.json'
-
 
 const AboutMe = () => {
-  const [aboutMeInfo] = useState(InfoAboutMe)
+  const [aboutMeData, setAboutMeData] = useState([])
+  const fetchData = async () => {
+    const response = await axios.get('https://api.codecarver.dev/article/3')
+    setAboutMeData(response.data.result)
+  }
+    useEffect(()=> {
+      fetchData();
+    },[])
 
     let aboutMe = null;
 
   aboutMe = (
     <div className={classes.About}>
-      {aboutMeInfo.map(aboutMeInfo => (
-        <div key={aboutMeInfo.id}>
+        <div key={aboutMeData.id}>
           <div>
-            <Title fontSize="60px" title={aboutMeInfo.title}></Title>
+            <Title fontSize="60px" title={aboutMeData.title}></Title>
           </div>
-            <img src={aboutMeInfo.link} alt="Profile" />
-            <AboutMeContent source={aboutMeInfo.content} />
+            <AboutMeContent source={aboutMeData.body} />
         </div>
-      ))}
     </div>
   );
   return aboutMe
 };
-
 export default AboutMe;
