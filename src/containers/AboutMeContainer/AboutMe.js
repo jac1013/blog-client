@@ -8,6 +8,7 @@ import InfoAboutMe from '../AboutMeContainer/InfoAboutMe.json'
 const AboutMe = () => {
   const [aboutMeInfo] = useState(InfoAboutMe)
 
+
     let aboutMe = null;
     
   aboutMe = (
@@ -17,8 +18,8 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={aboutMeInfo.title}></Title>
           </div>
-            <img src={aboutMeInfo.link} alt="Profile" />
-            <AboutMeContent source={aboutMeInfo.content} />
+            <img src={aboutMeInfo.link} alt="Avatar" />
+            <AboutMeContent source={aboutMeInfo.body} />
         </div>
       ))}
     </div>
