@@ -15,8 +15,9 @@ const AboutMe = () => {
       fetchData();
     },[])
 
-    let aboutMe = null;
 
+    let aboutMe = null;
+    
   aboutMe = (
     <div className={classes.About}>
         <div key={aboutMeData.id}>
