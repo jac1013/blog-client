@@ -1,31 +1,21 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import classes from "./Home.module.css";
 import HomeItem from "../../components/HomeItem/HomeItem";
 import Title from "../../components/Title/Title";
 
 const Home = () => {
-  const [posts] = useState([{
-      id: '1',
-      title: 'asdspgada',
-      body: 'Quisque nec purus est. Vivamus non lorem nunc. Curabitur semper, nibh eu mollis finibus, metus eros dapibus orci, ullamcorper suscipit dolor ligula sed justo.',
-      link: '1'
-    },
-    {
-      id: '2',
-      title: 'asdspgada',
-      body: 'In blandit placerat tempus. Morbi et diam lacinia, pretium lorem eget, tincidunt quam. Nunc venenatis est odio, tincidunt auctor lectus finibus vitae. Sed dignissim.',
-      link: '1'
-    },
-    {
-      id: '3',
-      title: 'asdspgada',
-      body: 'Quisque tristique eros nec nibh ultricies posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin accumsan nibh vitae ipsum maximus tincidunt.',
-      link: '1'
-    }]
-  );
-
+  const [posts, setPosts] = useState([]);
   const [welcome] = useState(['Mauris pellentesque malesuada justo. In eu felis nec nisi semper ultricies quis vitae ligula. Morbi sit amet mauris auctor, fermentum arcu in.']);
+
+  const fetchData = async () => {
+    const response = await axios.get('https://api.codecarver.dev/articles');
+    setPosts(response.data.result);
+  }
+
+    useEffect(() =>{
+      fetchData();
+    },[])
 
   let articles = null;
 
@@ -36,7 +26,7 @@ const Home = () => {
           <HomeItem
             title={post.title}
             body={`${post.body.slice(0, 150)}...`}
-            link={`/article/${post.link}`}
+            link={`/article/${post.id}`}
             key={post.id} />
         ))}
       </div>

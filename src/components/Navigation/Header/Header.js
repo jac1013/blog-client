@@ -8,7 +8,6 @@ const Header = () => {
 
   const [src] = useState([LogoImg])
   const [alt] = useState(['Logo-Blog'])
-  
   return (
   <header className={classes.Header}>
     <Logo Link="/"
