@@ -7,23 +7,31 @@ import WrittenBy from "../../components/WrittenBy/WrittenBy";
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
+  const [isLoading, setIsLoading] = useState(false)
   const articleId = props.match.params.id;
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true)
       const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
       setGetPost(response.data.result)
+      setIsLoading(false)
     }
     fetchData();
   },[articleId])
 
   return(
-    <main className={classes.Main}>
+    <React.Fragment>
+      {isLoading ? (
+        <div className={classes.Loader}></div>):(
+      <main className={classes.Main}>
         <div key={getPost.id}>
           <Title fontSize="80px" title={getPost.title}></Title>
           <WrittenBy link={getPost.link} author={getPost.author} date={getPost.created}/>
           <ArticleBody source={getPost.body} />
         </div>
-    </main>
+      </main>
+      )}
+    </React.Fragment>
   );
 };
 
