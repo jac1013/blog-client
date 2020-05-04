@@ -5,6 +5,6 @@ const Loader = ()=> {
 	return(
 		<div className={classes.Loader}></div>
 		)
-}
+};
 
 export default Loader;
