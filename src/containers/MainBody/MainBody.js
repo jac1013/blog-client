@@ -4,6 +4,7 @@ import classes from './MainBody.module.css';
 import ArticleBody from "../../components/ArticleBody/ArticleBody";
 import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
+import Loader from "../../components/LoaderComponent/Loader.js";
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
@@ -22,7 +23,7 @@ const MainBody = props => {
   return(
     <React.Fragment>
       {isLoading ? (
-        <div className={classes.Loader}></div>):(
+        <Loader></Loader>):(
       <main className={classes.Main}>
         <div key={getPost.id}>
           <Title fontSize="80px" title={getPost.title}></Title>
