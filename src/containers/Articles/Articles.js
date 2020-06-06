@@ -3,6 +3,7 @@ import axios from 'axios';
 import ArticlesItem from "../../components/ArticlesItem/ArticlesItem";
 import Title from "../../components/Title/Title";
 import classes from "./Articles.module.css";
+import Loader from "../../components/LoaderComponent/Loader.js";
 
 const Articles = props => {
   const [posts, setPosts] = useState([]);
@@ -34,7 +35,7 @@ const Articles = props => {
   } else {
     articles = (
       <div className={classes.Empty}>
-        <h1>Nothing has been found!</h1>
+        <Loader />
       </div>
     );
   }

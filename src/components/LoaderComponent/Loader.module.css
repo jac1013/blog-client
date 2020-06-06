@@ -11,6 +11,7 @@
   border-top: 13px solid green;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+  margin-top: auto;
 }
 
 @keyframes spin {
