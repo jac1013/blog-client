@@ -7,11 +7,11 @@ import classes from "./ArticlesItem.module.css";
 const ArticlesItem = (props) => (
   <div className={classes.Article}>
     <Title fontSize="35px" title={props.title}></Title>
-    <p>Published on {props.created}</p>
+    <p>Published on {props.updated_at}</p>
     <p>{props.body}</p>
     <Link to={props.link} className={classes.KeepReading}>Keep Reading →</Link>
     <div>
-  {console.log(props.link)}
+  {console.log(props.updated_at)}
   </div>
   </div>
 
