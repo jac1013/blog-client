@@ -17,10 +17,10 @@
 @media screen and (min-width: 750px) {
     .Articles {
         display: flex;
-        flex-wrap: wrap;
-        margin-left: 150px;
-        margin-right: 150px;
-        margin-bottom: 150px;
+        flex-wrap: nowrap;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 100px;
     }
 }
 

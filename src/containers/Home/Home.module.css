@@ -23,7 +23,7 @@
 @media screen and (min-width: 750px) {
     .Articles {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         margin-left: 150px;
         margin-right: 150px;
         margin-bottom: 150px;
@@ -35,4 +35,10 @@
         margin-left: 100px;
         margin-right: 100px;
     }
+} 
+.Content p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 } 

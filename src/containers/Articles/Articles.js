@@ -25,7 +25,7 @@ const Articles = () => {
           <ArticlesItem
             title={post.title}
             body={`${post.body.slice(0, 155)}...`}
-            date={post.created}
+            date={post.updated_at}
             link={`/article/${post.id}`}
             key={post.id} />
         ))}
