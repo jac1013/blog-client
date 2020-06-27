@@ -24,8 +24,8 @@ const Articles = () => {
         {posts.map(post => (
           <ArticlesItem
             title={post.title}
-            body={`${post.body.slice(0, 155)}...`}
-            date={post.updated_at}
+            body={`${post.body.slice(0, 154)}...`}
+            date={post.created}
             link={`/article/${post.id}`}
             key={post.id} />
         ))}

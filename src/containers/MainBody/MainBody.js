@@ -23,11 +23,13 @@ const MainBody = props => {
   return(
     <React.Fragment>
       {isLoading ? (
-        <Loader></Loader>):(
+        <div className={classes.Loader}>
+          <Loader />
+        </div>):(
       <main className={classes.Main}>
         <div key={getPost.id}>
           <Title fontSize="80px" title={getPost.title}></Title>
-          <WrittenBy link={getPost.link} author={getPost.author} date={getPost.created}/>
+          <WrittenBy date={getPost.created}/>
           <ArticleBody source={getPost.body} />
         </div>
       </main>
