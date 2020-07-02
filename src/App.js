@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Redirect} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 import './App.css';
 import Header from "./components/Navigation/Header/Header";
@@ -8,6 +8,7 @@ import MainBody from "./containers/MainBody/MainBody";
 import Home from "./containers/Home/Home";
 import Articles from "./containers/Articles/Articles";
 import AboutMe from "./containers/AboutMeContainer/AboutMe.js";
+import NotFound from './containers/PageNotFound/NotFound.js';
 
 function App(props) {
   console.log(process.env.REACT_APP_API_URL);
@@ -15,11 +16,14 @@ function App(props) {
   return (
     <React.Fragment>
       <Header />
-      <Route path="/article/:id" component={MainBody} />
-      <Route path="/articles" component={Articles} />
-      <Route path="/about-me" component={AboutMe} />
-      <Route path="/" exact component={Home} />
-      <Redirect to='/' />
+      <Switch>
+        <Route path="/article/:id" component={MainBody} />
+        <Route path="/articles" component={Articles} />
+        <Route path="/about-me" component={AboutMe} />
+        <Route path="/" exact component={Home} />
+
+        <Route path="" component={NotFound} />
+      </Switch>
       <Footer />
     </React.Fragment>
   );

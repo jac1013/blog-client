@@ -5,6 +5,7 @@ const Title = (props) => {
 
   const style = {
     paddingTop: '0',
+    letterSpacing: '0.04em',
     margin: '0',
     fontSize: size,
     fontWeight: '900',

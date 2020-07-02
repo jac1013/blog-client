@@ -25,7 +25,7 @@ const Home = () => {
         {posts.map(post => (
           <HomeItem
             title={post.title}
-            body={`${post.body.slice(0, 150)}...`}
+            body={`${post.body.slice(0, 154)}...`}
             link={`/article/${post.id}`}
             key={post.id} />
         ))}
@@ -51,7 +51,7 @@ const Home = () => {
         <Title fontSize="60px" title='Greatest Hits'></Title>
         <Title fontSize="30px" title='hand-picked list of best my articles'></Title>
       </div>
-      <div>
+      <div className={classes.Content}>
         {articles}
       </div>
     </React.Fragment>
