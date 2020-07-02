@@ -11,11 +11,11 @@
 .Article {
     padding-bottom: 20px;
     border-bottom: 1px solid green;
-    margin: 20px;
+    margin: 15px;
     overflow-wrap: break-word;
 }
 
-@media screen and (min-width: 1616px) {
+@media screen and (min-width: 1216px) {
     .Article {
         width: 30%;
     }
@@ -23,7 +23,7 @@
 
 @media (max-width: 1616px) {
     .Article {
-        width: 45%;
+        width: 30%;
     }
 }
 
