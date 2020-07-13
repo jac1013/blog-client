@@ -4,6 +4,7 @@ import classes from './MainBody.module.css';
 import ArticleBody from "../../components/ArticleBody/ArticleBody";
 import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
+import Loader from "../../components/LoaderComponent/Loader.js";
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
@@ -18,15 +19,17 @@ const MainBody = props => {
     }
     fetchData();
   },[articleId])
-
+const options = {year: 'numeric', month: 'long', day: 'numeric' };
   return(
     <React.Fragment>
       {isLoading ? (
-        <div className={classes.Loader}></div>):(
+        <div className={classes.Loader}>
+          <Loader />
+        </div>):(
       <main className={classes.Main}>
         <div key={getPost.id}>
-          <Title fontSize="65px" title={getPost.title}></Title>
-          <WrittenBy link={getPost.link} author={getPost.author} date={getPost.created}/>
+          <Title fontSize="60px" title={getPost.title}></Title>
+          <WrittenBy date={new Date(getPost.created).toLocaleDateString("en-EN", options)}/>
           <ArticleBody source={getPost.body} />
         </div>
       </main>

@@ -6,13 +6,10 @@ import classes from "./ArticlesItem.module.css";
 
 const ArticlesItem = (props) => (
   <div className={classes.Article}>
-    <Title fontSize="35px" title={props.title}></Title>
-    <p>Published on {props.created}</p>
+    <Title fontSize="25px" title={props.title}></Title>
+    <p>Published on {props.date}</p>
     <p>{props.body}</p>
     <Link to={props.link} className={classes.KeepReading}>Keep Reading →</Link>
-    <div>
-  {console.log(props.link)}
-  </div>
   </div>
 
 );
