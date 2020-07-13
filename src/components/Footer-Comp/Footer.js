@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import classes from "../Footer-Comp/Footer.module.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGithubSquare, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
     const [blogData] = useState({
@@ -15,8 +17,8 @@ function Footer() {
             <p>{blogData.blogName}</p>
         </div>
         <div>
-            <p>Keep in touch via <a className={classes.Contact} href={blogData.githubUrl}>Github </a>
-            or<a className={classes.Contact} href={blogData.linkedinUrl}> LinkedIn</a></p>
+            <p>Keep in touch via <a className={classes.Contact} href={blogData.githubUrl}>Github <FontAwesomeIcon color='white' icon={faGithubSquare}/> </a>
+            or<a className={classes.Contact} href={blogData.linkedinUrl}> LinkedIn <FontAwesomeIcon color='white' icon={faLinkedin}/></a></p>
         </div>
         <div>
             <p>{blogData.copyRight} {blogData.author} All rights reserved.</p>
