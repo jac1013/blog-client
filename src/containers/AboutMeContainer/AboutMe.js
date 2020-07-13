@@ -3,8 +3,9 @@ import axios from 'axios'
 import AboutMeContent from "../../components/AboutMeComponent/AboutMeContent.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
+import avatar from "../../assets/Picref.jpg";
 
-const dataUrl = "https://api.codecarver.dev/article/3";
+const dataUrl = "https://api.codecarver.dev/article/8";
 const AboutMe = () => {
   const [aboutMeData, setAboutMeData] = useState([])
   const fetchData = async () => {
@@ -24,7 +25,10 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={aboutMeData.title}></Title>
           </div>
+          <div className={classes.Content}>
+            <img className={classes.Avatar} src={avatar} alt="avatar" /> 
             <AboutMeContent source={aboutMeData.body} />
+          </div>
         </div>
     </div>
   );

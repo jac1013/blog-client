@@ -5,20 +5,22 @@
     padding-top: 100px;
     padding-bottom: 100px;
     align-items: center;
+    justify-content: center;
 }
 
 .Error404 h1{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .Error404 h3{
-    font-size: 45px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .Error404 p{
-    font-size: 35px;
+    font-size: 15px;
+    flex-wrap: wrap;
 }
 
 .Error404 a{
@@ -33,4 +35,9 @@
     color: green;
     font-weight: bold;
     font-size: 40px;
+}
+
+.Error404 img{
+    width: 600px;
+    height: 200px;
 }
