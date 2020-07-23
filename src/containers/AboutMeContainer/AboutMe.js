@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import AboutMeContent from "../../components/AboutMeComponent/AboutMeContent.js";
 import Title from "../../components/Title/Title";
 import classes from "../AboutMeContainer/AboutMe.module.css";
 import avatar from "../../assets/Picref.jpg";
+import MarkdownRenderer from '../../components/MarkdownRenderer/MarkdownRenderer';
 
 const dataUrl = "https://api.codecarver.dev/article/8";
 const AboutMe = () => {
@@ -27,7 +27,7 @@ const AboutMe = () => {
           </div>
           <div className={classes.Content}>
             <img className={classes.Avatar} src={avatar} alt="avatar" /> 
-            <AboutMeContent source={aboutMeData.body} />
+            <MarkdownRenderer source={aboutMeData.body} />
           </div>
         </div>
     </div>
