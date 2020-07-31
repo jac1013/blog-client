@@ -25,7 +25,7 @@ const AboutMe = () => {
           <div>
             <Title fontSize="60px" title={aboutMeData.title}></Title>
           </div>
-          <div className={classes.Content}>
+          <div className={classes.Content} >
             <img className={classes.Avatar} src={avatar} alt="avatar" /> 
             <MarkdownRenderer source={aboutMeData.body} />
           </div>
