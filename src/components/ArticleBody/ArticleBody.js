@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactMarkdown from "react-markdown";
+import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
 
 const ArticleBody = (props) => {
   return (
-    <ReactMarkdown source={props.source} />
+    <MarkdownRenderer source={props.source} />
   );
 };
 
