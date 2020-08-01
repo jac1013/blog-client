@@ -1,10 +1,10 @@
 import React from 'react';
-import LoaderGif from "./LoaderGifComponent.js";
+import LogoGif from "../../assets/Loader.gif";
 
 const Loader = ()=> {
 	return(
 		<div >
-			<LoaderGif />
+			<img src={LogoGif} alt="gif"  width="300" height="300" />
 		</div>
 		)
 };
