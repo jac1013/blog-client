@@ -1,9 +1,11 @@
 import React from 'react';
-import classes from './Loader.module.css';
+import LoaderGif from "./LoaderGifComponent.js";
 
 const Loader = ()=> {
 	return(
-		<div className={classes.Loader}></div>
+		<div >
+			<LoaderGif />
+		</div>
 		)
 };
 
