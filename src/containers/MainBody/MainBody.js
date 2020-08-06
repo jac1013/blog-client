@@ -19,7 +19,11 @@ const MainBody = props => {
     }
     fetchData();
   },[articleId])
-const options = {year: 'numeric', month: 'long', day: 'numeric' };
+const options = {
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              };
   return(
     <React.Fragment>
       {isLoading ? (
