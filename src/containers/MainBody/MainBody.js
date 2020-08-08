@@ -5,20 +5,23 @@ import ArticleBody from "../../components/ArticleBody/ArticleBody";
 import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
 import Loader from "../../components/LoaderComponent/Loader.js";
+import { useParams } from 'react-router-dom';
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
+  const {url} = useParams();
   const articleId = props.match.params.id;
+  let passUrl = true;
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
-      const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
+      const response = await axios.get(`https://api.codecarver.dev/article/${passUrl?url:articleId}`);
       setGetPost(response.data.result)
       setIsLoading(false)
     }
     fetchData();
-  },[articleId])
+  },[url, articleId, passUrl])
 const options = {year: 'numeric', month: 'long', day: 'numeric'};
   return(
     <React.Fragment>
