@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import {BrowserRouter} from 'react-router-dom';
 
-require('dotenv').config();
+require("dotenv").config();
 
 axios.defaults.baseURL = 'URL';
 
