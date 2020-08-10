@@ -13,7 +13,7 @@ const MainBody = props => {
   
   const articleId = props.match.params.id;
   let passUrl = true;
-  const {url} = useParams(articleId);
+  const {url} = useParams();
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
