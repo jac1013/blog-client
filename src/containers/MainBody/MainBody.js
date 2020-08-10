@@ -10,13 +10,14 @@ import { useParams } from 'react-router-dom';
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
-  const {url} = useParams();
+  
   const articleId = props.match.params.id;
   let passUrl = true;
+  const {url} = useParams(articleId);
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
-      const response = await axios.get(`https://api.codecarver.dev/article/${passUrl?url:articleId}`);
+      const response = await axios.get(`https://api.codecarver.dev/article/${articleId}`);
       setGetPost(response.data.result)
       setIsLoading(false)
     }
