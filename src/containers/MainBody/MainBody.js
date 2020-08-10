@@ -10,9 +10,8 @@ import { useParams } from 'react-router-dom';
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
-  
   const articleId = props.match.params.id;
-  let passUrl = true;
+  const passUrl = true;
   const {url} = useParams();
   useEffect(() => {
     const fetchData = async () => {

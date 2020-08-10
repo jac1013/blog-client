@@ -4,7 +4,7 @@ import ArticlesItem from "../../components/ArticlesItem/ArticlesItem";
 import Title from "../../components/Title/Title";
 import classes from "./Articles.module.css";
 import Loader from "../../components/LoaderComponent/Loader.js";
-//import {useParams} from 'react-router-dom';
+
 const Articles = () => {
   const [posts, setPosts] = useState([]);
   const fetchData = async () => {
