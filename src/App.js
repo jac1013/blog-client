@@ -11,7 +11,6 @@ import AboutMe from "./containers/AboutMeContainer/AboutMe.js";
 import NotFound from './containers/PageNotFound/NotFound.js';
 
 function App(props) {
-  console.log(process.env.REACT_APP_API_URL)
 
   return (
     <React.Fragment>
