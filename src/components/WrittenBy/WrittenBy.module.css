@@ -8,3 +8,8 @@
 .WrittenBy a {
     color: green;
 }
+
+.WrittenBy a:hover {
+    text-decoration: none;
+    color: green;
+}
