@@ -20,7 +20,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        margin-left: 150px;
+        margin-left: 1050px;
         margin-right: 150px;
         margin-bottom: 150px;
     }
@@ -29,8 +29,8 @@
 @media (max-width: 1616px) {
     .Articles {
         width: 100%;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
 
     }
 }
