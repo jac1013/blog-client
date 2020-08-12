@@ -8,7 +8,7 @@ import Loader from "../../components/LoaderComponent/Loader.js";
 const Articles = () => {
   const [posts, setPosts] = useState([]);
   const fetchData = async () => {
-    const response = await axios.get('https://api.codecarver.dev/articles');
+    const response = await axios.get(process.env.REACT_APP_API_URL);
     setPosts(response.data.result);
   }
     useEffect( () => {
