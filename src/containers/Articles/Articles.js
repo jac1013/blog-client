@@ -17,7 +17,6 @@ const Articles = () => {
 
 const sortedData = posts.sort((a, b) => a.date > b.date);
 const options = {year: 'numeric', month: 'long', day: 'numeric' };
-
   let articles = null; 
   if (posts.length >= 1) {
     articles = (
@@ -27,7 +26,7 @@ const options = {year: 'numeric', month: 'long', day: 'numeric' };
             title={post.title}
             body={`${post.body.slice(0, 154)}...`}
             date={new Date(post.created).toLocaleDateString("en-EN", options, sortedData)}
-            link={`/article/${post.id}`}
+            link={`/article/${post.id}/${post.url}`}
             key={post.id} />
         ))}
       </div>

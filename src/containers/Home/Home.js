@@ -26,7 +26,7 @@ const Home = () => {
           <HomeItem
             title={post.title}
             body={`${post.body.slice(0, 154)}...`}
-            link={`/article/${post.id}`}
+            link={`/article/${post.id}/${post.url}`}
             key={post.id} />
         ))}
       </div>

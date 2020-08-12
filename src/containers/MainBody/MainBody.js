@@ -5,11 +5,14 @@ import ArticleBody from "../../components/ArticleBody/ArticleBody";
 import Title from "../../components/Title/Title";
 import WrittenBy from "../../components/WrittenBy/WrittenBy";
 import Loader from "../../components/LoaderComponent/Loader.js";
+import { useParams } from 'react-router-dom';
 
 const MainBody = props => {
   const [getPost, setGetPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
   const articleId = props.match.params.id;
+  const passUrl = true;
+  const {url} = useParams();
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
@@ -18,7 +21,7 @@ const MainBody = props => {
       setIsLoading(false)
     }
     fetchData();
-  },[articleId])
+  },[url, articleId, passUrl])
 const options = {year: 'numeric', month: 'long', day: 'numeric'};
   return(
     <React.Fragment>
