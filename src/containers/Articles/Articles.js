@@ -15,7 +15,7 @@ const Articles = () => {
       fetchData();
     }, []);
 
-const sortedData = posts.sort((a, b) => a.date > b.date);
+const sortedData = posts.sort((a, b) => a.date < b.date);
 const options = {year: 'numeric', month: 'long', day: 'numeric' };
   let articles = null; 
   if (posts.length >= 1) {
