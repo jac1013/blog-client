@@ -9,7 +9,7 @@
 }
 
 .Welcome {
-    max-width: 550px;
+    max-width: 850px;
     font-size: 28px;
     overflow-wrap: break-word;
 }
@@ -23,6 +23,7 @@
 
 @media screen and (min-width: 1216px) {
     .Articles {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-left: 150px;

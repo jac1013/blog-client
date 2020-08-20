@@ -13,10 +13,8 @@
 }
 
 .Loader {
-    flex-basis: 450px;
     display: flex;
-    position: absolute;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    margin-left: 35em;
-    margin-top: 12em;
 }
